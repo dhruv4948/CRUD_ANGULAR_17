@@ -1,0 +1,106 @@
+<div>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h4>
+          Update Employee 
+          <a routerLink="/Employee" class="btn btn-danger float-end">Back</a>
+        </h4>
+      </div>
+      <div class="card-body">
+
+        <div *ngIf="isLoading  else elseForm">
+          <app-loder :title="loadingTitle"/>
+        </div>
+    
+        <ng-template #elseForm>
+        
+          <form (ngSubmit)="updateEmployee()">
+            <div *ngIf="emp">
+            
+
+
+            <div class="mb-3">
+              <label>Name</label>
+              <input
+                type="text"
+                name="emp_name"
+                [(ngModel)]="emp.emp_name"
+                class="form-control"
+              />
+              <span *ngIf="errors.emp_name" class="text-danger"
+                >Name is Required to Fill</span
+              >
+            </div>
+
+            <div class="mb-3">
+              <label>Email</label>
+              <input
+                type="text"
+                name="emp_email"
+                [(ngModel)]="emp.emp_email"
+                class="form-control"
+              />
+              <span *ngIf="errors.emp_email" class="text-danger">{{
+                errors.emp_email
+              }}</span>
+            </div>
+            <div class="mb-3">
+              <label>Age</label>
+              <input
+                type="text"
+                name="emp_age"
+                [(ngModel)]="emp.emp_age"
+                class="form-control"
+              />
+              <span *ngIf="errors.emp_age" class="text-danger"
+                >Age is Required to Fill</span
+              >
+            </div>
+            <div class="mb-3">
+              <label>Phone</label>
+              <input
+                type="text"
+                name="emp_phone"
+                [(ngModel)]="emp.emp_phone"
+                class="form-control"
+              />
+              <span *ngIf="errors.emp_phone" class="text-danger">{{
+                errors.emp_phone
+              }}</span>
+            </div>
+            <div class="mb-3">
+              <label>City</label>
+              <input
+                type="text"
+                name="emp_city"
+                [(ngModel)]="emp.emp_city"
+                class="form-control"
+              />
+              <span *ngIf="errors.emp_city" class="text-danger"
+                >City is Required to Fill</span
+              >
+            </div>
+            <div class="mb-3">
+              <label>Salary</label>
+              <input
+                type="text"
+                name="emp_salary"
+                [(ngModel)]="emp.emp_salary"
+                class="form-control"
+              />
+              <span *ngIf="errors.emp_salary" class="text-danger"
+                >Salary is Required to Fill</span
+              >
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </div>
+          </form>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+ 

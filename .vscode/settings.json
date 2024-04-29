@@ -1,0 +1,12 @@
+{
+  "editor.fontFamily": "Consolas",
+  "editor.codeLensFontFamily": "Consolas",
+  "editor.experimentalInlineEdit.fontFamily": "Consolas",
+  "editor.inlayHints.fontFamily": "Consolas",
+  "editor.fontVariations": false,
+  "editor.fontLigatures": false,
+  "editor.fontWeight": "normal",
+  "editor.inlineSuggest.fontFamily": "Consolas",
+  "debug.console.fontFamily": "Consolas",
+  "scm.inputFontFamily": "Consolas"
+}
