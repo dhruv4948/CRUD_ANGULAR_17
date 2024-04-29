@@ -10,10 +10,10 @@ import { EmployeeEditComponent } from './Pages/employee-edit/employee-edit.compo
 
 export const routes: Routes = [
 
-{path:'',component:HomePageComponent , title:'Home page'},
+{path:'home',component:HomePageComponent , title:'Home page'},
 {path:'contact-us',component:ContactPageComponent, title:'Contact page'},
 {path:'about-us',component:AboutPageComponent, title:'About page'},
-{path:'Employee',component:EmployeePageComponent, title:'Employee List'},
+{path:'',component:EmployeePageComponent, title:'Employee List'},
 {path:'Employee/create',component:EmployeeCreteComponent, title:'Employee Create'},
 {path:'Employee/:id/Edit',component:EmployeeEditComponent, title:'Employee Edit'},
 
